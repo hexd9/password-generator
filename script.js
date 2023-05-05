@@ -21,14 +21,14 @@ var criteriaSpecialCharacters = window.confirm("Would you like any Special Chara
   //2. Validate the input. Need to ensure that it meets the requirement of characters 8 < 128 and at least one character is selected
   var actualpassword =[]
   
-  
- var validCriteria = false; 
-  while (!validCriteria) {
-    var criteriaCharacters = window.prompt("Select password character count 8 - 128");
+  var validCriteria = false; 
+  while (validCriteria === false) {
     if (criteriaCharacters >= 8 && criteriaCharacters <= 128){
       validCriteria = true;
+// If anything is enterd that is NaN then it is false
+    } else {
+      return;
     }
-  //Need assistance in making this while loop continue to prompt the user to enter valid integer
   } 
   //3. Generate password based on below criteria
 
